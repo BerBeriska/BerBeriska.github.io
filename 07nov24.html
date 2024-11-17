@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+
+<script>
+     let startBox = document.createElement("div");
+     document.body.append(startBox);
+
+     function draw(size) {
+
+        let box = document.createElement("div");
+        box.style.width = size + "px";
+        box.style.height = size + "px";
+        box.style.border = "1px solid green";
+        document.body.append(box);
+
+        draw(size/2);
+
+     }
+
+     draw(500);
+</script>
+</html>
