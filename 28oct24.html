@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let zombie = document.createElement("img");
+        zombie.src = "11.gif";
+        document.body.append(zombie);
+        
+        left=100;
+        let step =1;
+        zombie.style.position='fixed'
+        zombie.style.top='100px';
+        zombie.style.left=left+'px';
+
+        function moveZomdie(){
+            left=left+step;
+
+            if(left>1000){
+                step=step*(-1);
+                zombie.style.transform='rotateY(180deg)';
+            }
+            if(left<0){
+                step=step*(-1);
+                zombie.style.transform='rotateY(0deg)';
+            }
+            zombie.style.left=left+'px';
+           
+        }
+        setInterval(moveZomdie, 1);
+    </script>  
+</body>
+</html>
