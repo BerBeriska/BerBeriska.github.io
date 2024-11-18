@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Баланс вклада</title>
+</head>
+<body>
+    <h1>Баланс на счету за каждый год</h1>
+    <div id="balance-output"></div> 
+    <script> 
+        let balance = 100000; 
+        let rate = 18.5;    
+        let period = 20; 
+        let output = ""; 
+        for (let year = 1; year <= period; year++) {
+            balance += balance * (rate / 100);
+            output += `Год ${year}: ${balance.toFixed(2)}<br>`; 
+        }
+        document.getElementById("balance-output").innerHTML = output;
+    </script>
+</body>
+</html>
