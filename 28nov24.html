@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка Хода Короля</title>
+</head>
+<body>
+    <h1>Проверка Хода Короля</h1>
+    <script>
+      
+        let c1 = 3; 
+        let r1 = 3; 
+
+        
+        let c2 = 7; 
+        let r2 = 1; 
+
+        
+        let canMove = Math.abs(r2 - r1) <= 1 && Math.abs(c2 - c1) <= 1;
+
+        
+        if (canMove) {
+            document.write("Король может сделать этот ход.");
+        } else {
+            document.write("Король не может сделать этот ход.");
+        }
+    </script>
+</body>
+</html>
+</html>
