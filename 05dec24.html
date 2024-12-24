@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертация единиц</title>
+</head>
+<body>
+    <h1>Конвертация единиц</h1>
+
+    <h2>Копейки в рубли и копейки</h2>
+    <p id="result1"></p>
+
+    <h2>Граммы в килограммы и граммы</h2>
+    <p id="result2"></p>
+
+    <h2>Секунды в часы, минуты и секунды</h2>
+    <p id="result3"></p>
+
+    <h2>Переводы</h2>
+    <p id="result4"></p>
+    <p id="result5"></p>
+    <p id="result6"></p>
+
+    <script>
+        // 1. Конвертация копеек в рубли и копейки
+        let kopecks = 123435;
+        let rubles = Math.floor(kopecks / 100);
+        let remainingKopecks = kopecks % 100;
+        document.getElementById("result1").innerText = `${kopecks} копеек = ${rubles} рубля(ей) и ${remainingKopecks} копеек`;
+
+        // 2. Конвертация граммов в килограммы и граммы
+        let grams = 876452;
+        let kilograms = Math.floor(grams / 1000);
+        let remainingGrams = grams % 1000;
+        document.getElementById("result2").innerText = `${grams} грамм = ${kilograms} килограмма(ов) и ${remainingGrams} грамм`;
+
+        // 3. Конвертация секунд в часы, минуты и секунды
+        let seconds = 503826;
+        let hours = Math.floor(seconds / 3600);
+        let remainingSecondsAfterHours = seconds % 3600;
+        let minutes = Math.floor(remainingSecondsAfterHours / 60);
+        let remainingSeconds = remainingSecondsAfterHours % 60;
+        document.getElementById("result3").innerText = `${seconds} секунд = ${hours} час(ов), ${minutes} минут(ы) и ${remainingSeconds} секунд(ы)`;
+
+        // 4. Перевод рублей и копеек в копейки
+        let rublesGiven = 12;
+        let kopecksGiven = 78;
+        let totalKopecks = rublesGiven * 100 + kopecksGiven;
+        document.getElementById("result4").innerText = `${rublesGiven} рубля(ей) и ${kopecksGiven} копеек = ${totalKopecks} копеек`;
+
+        // 5. Перевод тонн, килограммов и граммов в граммы
+        let tonnes = 7;
+        let kilogramsGiven = 34;
+        let gramsGiven = 15;
+        let totalGrams = tonnes * 1000 * 1000 + kilogramsGiven * 1000 + gramsGiven;
+        document.getElementById("result5").innerText = `${tonnes} тонна(он), ${kilogramsGiven} килограмма(ов) и ${gramsGiven} грамм = ${totalGrams} граммов`;
+
+        // 6. Перевод суток, часов, минут и секунд в секунды
+        let days = 15;
+        let hoursGiven = 7;
+        let minutesGiven = 43;
+        let secondsGiven = 5;
+        let totalSeconds = days * 86400 + hoursGiven * 3600 + minutesGiven * 60 + secondsGiven;
+        document.getElementById("result6").innerText = `${days} суток, ${hoursGiven} час(ов), ${minutesGiven} минут(ы) и ${secondsGiven} секунд(ы) = ${totalSeconds} секунд`;
+    </script>
+</body>
+</html>
