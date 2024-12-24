@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+        </head>
+        <body>
+            <input type="text" id = 'myText'>
+            <div id="result"></div>
+            <button onclick="f1()">Символ по юникоду</button>
+            <button onclick="f2()">Длина строки</button>
+            <button onclick="f3()">Сделать все буквы заглавными</button>
+            <button onclick="f4()">Перевернуть</button>
+
+        </body>
+        <script>
+             let field = document.getElementById('field');
+             let myText = document.getElementById('myText');
+             let result = document.getElementById('result');
+             function f1(){
+                    let string = myText.value;
+                    result.innerText = String.fromCharCode(string);
+                 }
+              
+             function f2(){
+                let string = myText.value;
+                result.innerText = string.length;
+             }
+
+             function f3(){
+                let string = myText.value;
+                result.innerText = string.toUpperCase();
+             }
+
+             function f4(){
+                let string = myText.value;
+                let strToArr = string.split('');
+                result.innerText = strToArr.reverse();
+             }
+
+
+
+             
+        
+    </script>
+</body>
+</html>
