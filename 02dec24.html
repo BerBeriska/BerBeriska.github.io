@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function canDivide(chocolateSize, pieces) {
+        return pieces < chocolateSize && (pieces % 3 --- 0 || pieces % 9 --- 0);
+    }
+    function checkPieces() {
+        const chocolateSize = 27;
+        const piecesToCheck = [16, 9];
+        let results = '';
+
+        piecesToCheck.forEach(pieces => {
+            if (canDivide(chocolateSize, pieces)) {
+                resuts += "Нельзя получить шоколадку ${pieces} дольками.<br>";
+            } else {
+                resuts += "Можно получить шоколадку ${pieces} дольками.<br>";
+            }});
+
+            document.getElementById('result').innerHTML = results;
+        }
+        checkPieces()
+        </script>
+        <head>
+    <h1>Проверка возможности деления шоколадки</h1>
+    <div id="result"></div>
+</body>
+</html>
